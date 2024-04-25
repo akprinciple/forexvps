@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Locked Page | Myfxvpsm</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="assets/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" />
+  </head>
+  <body>
+    <div class="container-scroller">
+      <div class="container-fluid page-body-wrapper full-page-wrapper">
+        <div class="row w-100 m-0">
+          <div class="content-wrapper full-page-wrapper d-flex align-items-center auth login-bg">
+            <div class="card col-lg-4 mx-auto">
+              <div class="card-body px-5 py-5">
+                <h3 class="card-title text-left mb-3">Locked</h3>
+                <form>
+                    <h4 class="mb-2">Welcome to Myfxvpsm! 👋</h4>
+              <p class="mb-4">You are seeing this page because you are yet to verify your account!</p>
+
+              
+              <form id="formAuthentication" class="mb-3" method="POST">
+              Check your mail and verify your account<br> 
+                     <!-- <input type="password" class="form-control text-center" id="examplePassword1" placeholder="Password"> -->
+                    <span id="show" style="display: none" class=" mt-2"> 
+                        or 
+                        <center>
+                        <img src="assets/images/loading.gif" style="display: none;" alt="" id="loading">
+                          
+                        <button type="button"  name="submit" id="btn" style="display: block;"  onclick="Locked()" class="btn btn-success d-grid p-3 btn-xl mx-auto">Click here </button>
+                      </center>
+                     
+                        to Re-send the link.
+                    </span>
+                    <span id="resend" class="">The resend button will be available in 
+                    <h3 id="timerContainer" class="text-center" style="color: orange">
+                        <span id="timer">60</span>S
+                    </h3>    
+                    </span>
+                  <div class="form-group d-flex align-items-center justify-content-between">
+                    <a href="../../index.html" class="forgot-pass text-success">Home Page</a>
+                  </div>
+                  <div class="text-center">
+                    <a href="login.html">
+                        <button type="button" class="btn btn-primary btn-block enter-btn">Login</button>
+                    </a>
+                  </div>
+                 
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- content-wrapper ends -->
+        </div>
+        <!-- row ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="assets/vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="assets/js/off-canvas.js"></script>
+    <script src="assets/js/hoverable-collapse.js"></script>
+    <script src="assets/js/misc.js"></script>
+    <script src="assets/js/settings.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/todolist.js"></script>
+    <script type="text/javascript">
+        setInterval((e) => {
+            timer.innerHTML--;
+           if (timer.innerHTML < 10) {
+            timerContainer.style.color = 'green'
+           }
+           if(timer.innerHTML < 0){
+            document.getElementById("show").style.display="inline";
+            document.getElementById("resend").style.display="none";
+           }
+        }, 1000);
+        btn.addEventListener('click', ()=>{
+            btn.style.display = 'none'
+        })
+    </script>
+    <!-- endinject -->
+  </body>
+</html>
